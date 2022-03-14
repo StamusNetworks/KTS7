@@ -1,0 +1,1 @@
+{"query":{"description":"","filters":[],"query":{"language":"lucene","query":"NOT tls.version.keyword: \"TLS 1.2\" NOT tls.version.keyword: \"TLS 1.3\" NOT dest_port: 443"},"title":"Non standard TLS port with older TLS versions"},"type":"query","references":[],"coreMigrationVersion":"7.15.2","updated_at":"2021-07-30T16:40:39.204Z"}
