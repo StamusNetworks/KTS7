@@ -3,10 +3,12 @@ Kibana 7 Templates for Suricata
 ===============================
 
 Templates/Dashboards for Kibana 7 to use with `Suricata
-<https://suricata-ids.org/>`_. Suricata IDPS/NSM threat hunting and the ELK 7 stack
+<https://suricata.io/>`_. Suricata IDPS/NSM threat hunting and the ELK 7 stack
 
 This repository provides 28 dashboards for the Kibana 7.x and Elasticsearch 7.x
-for use with Suricata IDS/IPS/NSM - Intrusion Detection, Intrusion Prevention and Network Security Monitoring system
+for use with Suricata IDS/IPS/NSM - Intrusion Detection, Intrusion Prevention and Network Security Monitoring system.        
+
+Those dashboards are already included by default in the `SELKS <https://github.com/StamusNetworks/SELKS>`_ distribution. 
 
 These dashboards are for use with Suricata 6+ and enabled Rust build, Elasticsearch, Logstash, 
 Kibana 7 and comprise of more than 400 visualizations and 24 predefined searches.
