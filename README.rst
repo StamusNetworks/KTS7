@@ -1,77 +1,77 @@
-===============================
-Kibana 7 Templates for Suricata
-===============================
+============================================================
+OpenSearch Kibana Dashboards and Visualisations for Suricata
+============================================================
 
-Templates/Dashboards for Kibana 7 to use with `Suricata
-<https://suricata.io/>`_. Suricata IDPS/NSM threat hunting and the ELK 7 stack
+Dashboards for Kibana to use with `Suricata
+<https://suricata.io/>`_. Suricata IDS/IPS/NSM network threat hunting and the OpenSearch stack.
 
-This repository provides 28 dashboards for the Kibana 7.x and Elasticsearch 7.x
-for use with Suricata IDS/IPS/NSM - Intrusion Detection, Intrusion Prevention and Network Security Monitoring system.        
+This repository provides 55 dashboards for Kibana and OpenSearch for network threat detection use with 
+Suricata IDS/IPS/NSM - Intrusion Detection, Intrusion Prevention and Network Security Monitoring system.
 
-Those dashboards are already included by default in the `SELKS <https://github.com/StamusNetworks/SELKS>`_ distribution. 
+These dashboards are for use with Suricata 8+, OpenSearch and Kibana and comprise of more than 400 visualizations and 24 predefined searches.
 
-These dashboards are for use with Suricata 6+ and enabled Rust build, Elasticsearch, Logstash, 
-Kibana 7 and comprise of more than 400 visualizations and 24 predefined searches.
+The dashboards are already included by default in the `Clear NDR Community  <https://www.stamus-networks.com/clear-ndr-community>`_ distribution.
 
 The dashboards are:
 
+ - SN-SMB
+ - SN-SNMP
+ - SN-HUNT-1
+ - SN-SIP
+ - SN-MQTT
+ - SN-KRB5
+ - SN-RFB
+ - SN-IKEv2
  - SN-ALERTS
  - SN-ALL
- - SN-ANOMALY
- - SN-DHCP
  - SN-DNS
- - SN-DNP3
  - SN-FILE-Transactions
  - SN-FLOW
  - SN-HTTP
- - SN-HUNT-1
  - SN-IDS
- - SN-IKEv2
- - SN-KRB5
- - SN-MQTT
- - SN-NFS
  - SN-OVERVIEW
- - SN-RDP
- - SN-RFB
- - SN-SIP
- - SN-SMB
  - SN-SMTP
- - SN-SNMP
  - SN-SSH
  - SN-STATS
  - SN-TLS
  - SN-VLAN
  - SN-TFTP
+ - SN-DHCP
  - SN-TrafficID
+ - SN-RDP
+ - SN-ANOMALY
+ - SN-DNP3
+ - SN-NFS
+ - SN-FLOW-HTTP
+ - SN-FLOW-SMTP
+ - SN-FLOW-SMB
+ - SN-FLOW-DNS
+ - SN-FLOW-TLS
+ - SN-FLOW-NTP
+ - SN-FLOW-FTPDATA
+ - SN-FLOW-DCERPC
+ - SN-FLOW-KRB5
+ - SN-FLOW-DHCP
+ - SN-FLOW-QUIC
+ - SN-FLOW-MDNS
+ - SN-FLOW-LDAP
+ - SN-FLOW-FTP
+ - SN-FLOW-SIP
+ - SN-FLOW-BITTORRENT
+ - SN-FLOW-WEBSOCKET
+ - SN-FLOW-HTTP2
+ - SN-FLOW-SNMP
+ - SN-FLOW-TFTP
+ - SN-FLOW-IMAP
+ - SN-FLOW-POP3
+ - SN-FLOW-IKE
+ - SN-FLOW-ENIP
+ - SN-FLOW-DNP3
+ - SN-FLOW-SSH
+ - SN-FLOW-NFS
  
 
 How to use
 ==========
 
-To import all the vizualizasitons and dahsboards to Kibana 7 using the native API - on the host runing Kibana 7 or ELK7: ::
-
- cd API-KIBANA7
- curl -X POST "localhost:5601/api/saved_objects/_import" -H 'kbn-xsrf: true' --form file=@index-pattern.ndjson
- curl -X POST "localhost:5601/api/saved_objects/_import" -H 'kbn-xsrf: true' --form file=@search.ndjson
- curl -X POST "localhost:5601/api/saved_objects/_import" -H 'kbn-xsrf: true' --form file=@visualization.ndjson 
- curl -X POST "localhost:5601/api/saved_objects/_import" -H 'kbn-xsrf: true' --form file=@dashboard.ndjson
- curl -X POST "localhost:5601/api/saved_objects/_import" -H 'kbn-xsrf: true' --form file=@query.ndjson
- service kibana restart
-
-To import all and overwrite  - on the host runing Kibana 7 or ELK7: ::
-
- cd API-KIBANA7
- curl -X POST "localhost:5601/api/saved_objects/_import?overwrite=true" -H 'kbn-xsrf: true' --form file=@index-pattern.ndjson
- curl -X POST "localhost:5601/api/saved_objects/_import?overwrite=true" -H 'kbn-xsrf: true' --form file=@search.ndjson
- curl -X POST "localhost:5601/api/saved_objects/_import?overwrite=true" -H 'kbn-xsrf: true' --form file=@visualization.ndjson
- curl -X POST "localhost:5601/api/saved_objects/_import?overwrite=true" -H 'kbn-xsrf: true' --form file=@dashboard.ndjson
- curl -X POST "localhost:5601/api/saved_objects/_import?overwrite=true" -H 'kbn-xsrf: true' --form file=@query.ndjson
- service kibana restart
-
-The rest of the folder structure set up is Scirius CE specific and not needed in the manual import.
-
-You would need to select ``logstash-*`` as a default index once you open any dashboard for the first time after initial load/import.  
-
-A similar to this logstash template could be used - https://github.com/StamusNetworks/SELKS/blob/SELKS5/staging/etc/logstash/conf.d/logstash.conf
-
-For optimal results an example of elasticsearch template has been included under ``es-template\elasticsearch7-template.json`` that is used in SELKS 6.
+To import all the visualizations and dashboards - on the host running Kibana with the OpenSearch stack - simply import the ``ClearNDRCommunity.ndjson`` file located in the ``API-KIBANA7/`` folder.
