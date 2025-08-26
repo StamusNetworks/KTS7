@@ -74,4 +74,4 @@ The dashboards are:
 How to use
 ==========
 
-To import all the visualizations and dashboards - on the host running Kibana with the OpenSearch stack - simply import the ``ClearNDRCommunity.ndjson`` file located in the ``API-KIBANA7/`` folder.
+To import all the visualizations and dashboards at once - on the host running Kibana with the OpenSearch stack - simply import the ``ClearNDRCommunity.ndjson`` file located in the ``API-KIBANA7/`` folder. To do so go to ``Dashboards Management`` in OpenSearch , on the left hand side select ``Saved objects``, click ``Import`` and select the ``ClearNDRCommunity.ndjson`` file.
