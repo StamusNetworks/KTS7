@@ -75,3 +75,11 @@ How to use
 ==========
 
 To import all the visualizations and dashboards at once - on the host running Kibana with the OpenSearch stack - simply import the ``ClearNDRCommunity.ndjson`` file located in the ``API-KIBANA7/`` folder. To do so go to ``Dashboards Management`` in OpenSearch , on the left hand side select ``Saved objects``, click ``Import`` and select the ``ClearNDRCommunity.ndjson`` file.
+
+**NOTE:**     
+
+You would need to select `logstash-*` as a default index once you open any dashboard for the first time after initial load/import. 
+A similar to this logstash conf could be used - https://github.com/StamusNetworks/SELKS/blob/master/staging/etc/logstash/conf.d/logstash.conf 
+
+For optimal results an example of elasticsearch/opensearch template has been included under ``es-template\elasticsearch7-template.json``
+
