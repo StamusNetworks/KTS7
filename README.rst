@@ -5,10 +5,10 @@ OpenSearch Kibana Dashboards and Visualisations for Suricata
 Dashboards for Kibana to use with `Suricata
 <https://suricata.io/>`_. Suricata IDS/IPS/NSM network threat hunting and the OpenSearch stack.
 
-This repository provides 55 dashboards for Kibana and OpenSearch for network threat detection use with 
+This repository provides 58 dashboards for Kibana and OpenSearch for network threat detection use with 
 Suricata IDS/IPS/NSM - Intrusion Detection, Intrusion Prevention and Network Security Monitoring system.
 
-These dashboards are for use with Suricata 8+, OpenSearch and Kibana and comprise of more than 400 visualizations and 24 predefined searches.
+These dashboards are for use with Suricata 8+, OpenSearch and Kibana and comprise of more than 400 visualizations and 28 predefined searches.
 
 The dashboards are already included by default in the `Clear NDR Community  <https://www.stamus-networks.com/clear-ndr-community>`_ distribution.
 
@@ -66,6 +66,9 @@ The dashboards are:
  - SN-FLOW-POP3
  - SN-FLOW-IKE
  - SN-FLOW-ENIP
+ - SN-FLOW-RDP
+ - SN-FLOW-MQTT
+ - SN-FLOW-RFB
  - SN-FLOW-DNP3
  - SN-FLOW-SSH
  - SN-FLOW-NFS
